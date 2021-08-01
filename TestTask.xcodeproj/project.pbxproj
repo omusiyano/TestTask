@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,11 @@
 		7D24DD4A26B167C100C78338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D24DD4826B167C100C78338 /* LaunchScreen.storyboard */; };
 		7D24DD5526B167C100C78338 /* TestTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D24DD5426B167C100C78338 /* TestTaskTests.swift */; };
 		7D24DD6026B167C100C78338 /* TestTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D24DD5F26B167C100C78338 /* TestTaskUITests.swift */; };
+		7D24DD6E26B17D1000C78338 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D24DD6D26B17D1000C78338 /* SearchResponse.swift */; };
+		7D24DD7026B3373A00C78338 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D24DD6F26B3373A00C78338 /* NetworkService.swift */; };
+		7DF1E86326B6C8A4002E26A4 /* NbuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF1E86126B6C8A3002E26A4 /* NbuTableViewCell.swift */; };
+		7DF1E86426B6C8A4002E26A4 /* NbuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DF1E86226B6C8A4002E26A4 /* NbuTableViewCell.xib */; };
+		7DF1E8E926B6F4CA002E26A4 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 7DF1E8E826B6F4CA002E26A4 /* Charts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,10 @@
 		7D24DD5B26B167C100C78338 /* TestTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D24DD5F26B167C100C78338 /* TestTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskUITests.swift; sourceTree = "<group>"; };
 		7D24DD6126B167C100C78338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D24DD6D26B17D1000C78338 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		7D24DD6F26B3373A00C78338 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		7DF1E86126B6C8A3002E26A4 /* NbuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NbuTableViewCell.swift; sourceTree = "<group>"; };
+		7DF1E86226B6C8A4002E26A4 /* NbuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NbuTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF1E8E926B6F4CA002E26A4 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +109,12 @@
 		7D24DD3C26B167BF00C78338 /* TestTask */ = {
 			isa = PBXGroup;
 			children = (
-				7D24DD3D26B167BF00C78338 /* AppDelegate.swift */,
+				7DF1E8E326B6EC23002E26A4 /* NbuCell */,
+				7DF1E8E426B6EC43002E26A4 /* Network */,
 				7D24DD3F26B167BF00C78338 /* SceneDelegate.swift */,
 				7D24DD4126B167BF00C78338 /* ViewController.swift */,
 				7D24DD4326B167BF00C78338 /* Main.storyboard */,
+				7D24DD3D26B167BF00C78338 /* AppDelegate.swift */,
 				7D24DD4626B167C100C78338 /* Assets.xcassets */,
 				7D24DD4826B167C100C78338 /* LaunchScreen.storyboard */,
 				7D24DD4B26B167C100C78338 /* Info.plist */,
@@ -128,6 +140,24 @@
 			path = TestTaskUITests;
 			sourceTree = "<group>";
 		};
+		7DF1E8E326B6EC23002E26A4 /* NbuCell */ = {
+			isa = PBXGroup;
+			children = (
+				7DF1E86126B6C8A3002E26A4 /* NbuTableViewCell.swift */,
+				7DF1E86226B6C8A4002E26A4 /* NbuTableViewCell.xib */,
+			);
+			path = NbuCell;
+			sourceTree = "<group>";
+		};
+		7DF1E8E426B6EC43002E26A4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7D24DD6D26B17D1000C78338 /* SearchResponse.swift */,
+				7D24DD6F26B3373A00C78338 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +174,9 @@
 			dependencies = (
 			);
 			name = TestTask;
+			packageProductDependencies = (
+				7DF1E8E826B6F4CA002E26A4 /* Charts */,
+			);
 			productName = TestTask;
 			productReference = 7D24DD3A26B167BF00C78338 /* TestTask.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +248,9 @@
 				Base,
 			);
 			mainGroup = 7D24DD3126B167BF00C78338;
+			packageReferences = (
+				7DF1E8E726B6F4CA002E26A4 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 7D24DD3B26B167BF00C78338 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D24DD4A26B167C100C78338 /* LaunchScreen.storyboard in Resources */,
+				7DF1E86426B6C8A4002E26A4 /* NbuTableViewCell.xib in Resources */,
 				7D24DD4726B167C100C78338 /* Assets.xcassets in Resources */,
 				7D24DD4526B167BF00C78338 /* Main.storyboard in Resources */,
 			);
@@ -258,9 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D24DD7026B3373A00C78338 /* NetworkService.swift in Sources */,
+				7D24DD6E26B17D1000C78338 /* SearchResponse.swift in Sources */,
 				7D24DD4226B167BF00C78338 /* ViewController.swift in Sources */,
 				7D24DD3E26B167BF00C78338 /* AppDelegate.swift in Sources */,
 				7D24DD4026B167BF00C78338 /* SceneDelegate.swift in Sources */,
+				7DF1E86326B6C8A4002E26A4 /* NbuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +633,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7DF1E8E726B6F4CA002E26A4 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7DF1E8E826B6F4CA002E26A4 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DF1E8E726B6F4CA002E26A4 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D24DD3226B167BF00C78338 /* Project object */;
 }

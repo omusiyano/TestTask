@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="NbuTableViewCell" customModule="TestTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Доллар США" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voo-MU-J1l">
+                        <rect key="frame" x="9" y="12" width="304" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1223.102390 UAH" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTZ-C3-MlH">
+                        <rect key="frame" x="239" y="1.5" width="139" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJW-pu-L09">
+                        <rect key="frame" x="346" y="28" width="32" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="eJW-pu-L09" secondAttribute="trailing" constant="7" id="6NJ-ZY-peg"/>
+                    <constraint firstItem="iTZ-C3-MlH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1.5" id="BnG-eW-f2l"/>
+                    <constraint firstAttribute="bottom" secondItem="eJW-pu-L09" secondAttribute="bottom" constant="2" id="Rej-gN-qWy"/>
+                    <constraint firstAttribute="trailing" secondItem="iTZ-C3-MlH" secondAttribute="trailing" constant="7" id="ucf-tr-urJ"/>
+                    <constraint firstItem="eJW-pu-L09" firstAttribute="top" secondItem="iTZ-C3-MlH" secondAttribute="bottom" constant="6" id="zkk-7y-RmG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="titleCc" destination="eJW-pu-L09" id="VRC-rE-b3r"/>
+                <outlet property="titleCurrencies" destination="voo-MU-J1l" id="Ipu-0D-y3h"/>
+                <outlet property="titleRate" destination="iTZ-C3-MlH" id="0ZZ-6a-DMI"/>
+            </connections>
+            <point key="canvasLocation" x="177.536231884058" y="68.303571428571431"/>
+        </tableViewCell>
+    </objects>
+</document>
